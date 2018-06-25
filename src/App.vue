@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2">
+          <br>
+          <h2>Counter</h2>
+          <hr>
+          <result></result>
+          <counter></counter>
+          <br>
+          <input-model></input-model>
+          <hr>
+          <newresult></newresult>
+          <newcounter></newcounter>
+          <br>
+          <newinput-model></newinput-model>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import counter from './components/Counter.vue';
+import result from './components/Results.vue';
+import inputModel from './components/InputModel.vue';
+import newcounter from './components/NewCounter.vue';
+import newresult from './components/NewResults.vue';
+import newinputModel from './components/NewInputModel.vue';
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld,
-  },
+    counter,
+    result,
+    inputModel,
+    newcounter,
+    newresult,
+    newinputModel,
+  }
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
